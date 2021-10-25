@@ -1,0 +1,41 @@
+{
+  "name": "umoja-icons",
+  "version": "0.1.0",
+  "description": "Umoja Design System Icons",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Amy Simpson",
+  "scripts": {
+    "clean": "rimraf Icons package *.tgz",
+    "export": "figma-export use-config figma.config.js",
+    "build": "run-s clean export",
+    "test": "node test.js",
+    "np": "np",
+    "release": "run-s build np"
+  },
+  "devDependencies": {
+    "@figma-export/cli": "^3.5.0",
+    "@figma-export/output-components-as-svg": "^3.5.0",
+    "@figma-export/transform-svg-with-svgo": "^3.5.0",
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
+    "np": "^7.5.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "files": [
+    "Icons/"
+  ],
+  "homepage": "https://github.com/aesimpson/umoja-icons.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aesimpson/umoja-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aesimpson/umoja-icons.git/issues"
+  },
+  "keywords": [
+    "icons",
+    "svg"
+  ]
+}
