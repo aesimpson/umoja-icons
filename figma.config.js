@@ -7,12 +7,23 @@ const outputters = [
 ];
   
 /** @type {import('svgo').PluginConfig[]} */
+
 const outlineSVGOConfig = [
     { removeDimensions: true },
+    { removeDoctype: true },
+    { removeXMLProcInst: true },
+    { removeComments: true}, 
+    { removeMetadata: true },
+    { cleanupAttrs: true },
+    { removeEmptyAttrs: true },
+    { mergePaths: true },
     { sortAttrs: true },
-    { removeAttrs: { attrs: "stroke" } },
-    { addAttributesToSVGElement: { attribute: { stroke: "currentColor" } } },
+    { removeTitle: true },
+    { removeDesc: true },
+    { cleanupIDs: true }
 ];
+
+
 
 /** @type {import('@figma-export/types').FigmaExportRC} */
 module.exports = {
@@ -21,7 +32,7 @@ module.exports = {
             "components", {
                 fileId,
                 onlyFromPages: ["Icons"],
-                transformers: [svgo({ multipass: true, plugins: outlineSVGOConfig })],
+                transformers: [svgo({ multipass: true, full: true, plugins: outlineSVGOConfig })],
                 outputters,
             },
         ],

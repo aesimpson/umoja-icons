@@ -7,11 +7,11 @@
   "author": "Amy Simpson",
   "scripts": {
     "clean": "rimraf Icons package *.tgz",
-    "export": "figma-export use-config figma.config.js",
+    "export": "figma-export use-config figma.config.js ",
     "build": "run-s clean export",
     "test": "node test.js",
     "np": "np",
-    "release": "run-s build np"
+    "release": "run-s np"
   },
   "devDependencies": {
     "@figma-export/cli": "^3.5.0",
