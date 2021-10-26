@@ -1,5 +1,7 @@
 # Umoja Design System Icons Library
 
+[npm package](https://www.npmjs.com/package/umoja-icons)
+
 ## Exporting from Figma
 Icons are exported from Figma using the [figma-export](https://github.com/marcomontalbano/figma-export) package suite. You can configure which Figma file to export from by setting the file ID in .env.
 Additional export options are set in figma.config.js including which pages in the file to export from and SVGO optimization.
